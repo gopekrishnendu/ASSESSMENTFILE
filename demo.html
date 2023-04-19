@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="demo.css" />
+    <title>use button</title>
+    
+</head>
+<body>
+    <div class="demo">
+      
+      
+      <h2 id="day">Monday</h2>
+      <h2 id="month">January</h2>
+      
+      <script>
+        var dayIndex = 0;
+        var dayOfWeek = [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ];
+        var monthIndex = 0;
+        var months = [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ];
+        function changeText() {
+          document.getElementById("day").innerHTML =
+            dayOfWeek[dayIndex++ % dayOfWeek.length];
+        }
+
+        function changeMonth() {
+          document.getElementById("month").innerHTML =
+            months[monthIndex++ % months.length];
+        }
+      </script>
+      
+      <button type="button" onclick="changeText(dayIndex)">Change day</button>
+      <button type="button" onclick="changeMonth(monthIndex)">
+        Change month
+      </button>
+      
+    </div>
+  </body>
+</html>
