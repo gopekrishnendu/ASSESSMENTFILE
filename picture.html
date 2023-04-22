@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pictures</title>
+  </head>
+  <body>
+    
+    <center>
+        <h1> WELCOME TO DURGAPUR</h1>
+      <img id="img" src="durgapur.jpg" height="500px" width="900px" />
+    </center>
+    <script>
+      var image = document.getElementById("img");
+      var counter = 0;
+      var pic = [
+        "shivshakti.jpg",
+        "junctionmall.jpg",
+        "nit.jpg",
+        "kmpdurgapur.jpg"
+      ];
+
+      function showPreviousPicture() {
+        if (counter <= 0) {
+          return false;
+        }
+        counter--;
+        image.src = pic[counter];
+      }
+
+      function showNextPicture() {
+        if (counter >= pic.length - 1) {
+          return false;
+        }
+        counter++;
+        image.src = pic[counter];
+      }
+    </script>
+    <center>
+      <button type="button" onclick="showPreviousPicture()">Back</button>
+      <button type="button" onclick="showNextPicture()">Next</button>
+    </center>
+  </body>
+</html>
